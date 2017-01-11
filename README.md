@@ -37,3 +37,23 @@
    </pre>
 ### 1.2 CustomDialog
 ### 1.3 Firebase
+<pre>
+ <code>
+FirebaseDatabase.getInstance();
+private DatabaseReference myRef = database.getReference("text");
+
+ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                Log.d(TAG, "Value is: " + value);
+                mTextView.setText(value);
+            }
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+</code>
+</pre>
