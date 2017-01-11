@@ -35,8 +35,7 @@
     }
     </code>
    </pre>
-   
-   
+
 ### 1.2 CustomDialog
 
 
